@@ -1,8 +1,8 @@
 import { mount } from 'svelte'
 import './app.css'
-import WizardI18nApp from './WizardI18nApp.svelte'
+import WizardLocalizedApp from './WizardLocalizedApp.svelte'
 
-const app = mount(WizardI18nApp, {
+const app = mount(WizardLocalizedApp, {
   target: document.getElementById('app')!,
 })
 
