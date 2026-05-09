@@ -3,10 +3,16 @@ import { defineConfig } from 'vite'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
 
 export default defineConfig({
+  root: 'src',
+  publicDir: '../public',
   plugins: [svelte()],
   build: {
-    rollupOptions: {
-      input: resolve(__dirname, 'src/index.html'),
+    outDir: '../dist',
+    emptyOutDir: true,
+  },
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src'),
     },
   },
 })
